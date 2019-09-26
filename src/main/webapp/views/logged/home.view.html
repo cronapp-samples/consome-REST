@@ -1,0 +1,60 @@
+<div class="jumbotron jumbotron-fluid main-title">
+    <h2 class="component-holder text-left" xattr-position="text-left" data-component="crn-subtitle" id="crn-subtitle-814474">consome-REST</h2>
+</div>
+<div class="component-holder ng-binding ng-scope crn-navigator-horizontal" data-component="crn-navbar" id="crn-navbar-986427">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="component-holder ng-binding ng-scope navbar-brand" data-component="crn-image" href="#/home"> <img src="plugins/cronapp-framework-js/dist/img/logo.svg" style="width:101px; margin-top:-4px" id="crn-navbar-logo" data-component="crn-image"> </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" style="float:none">
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-lg fa-gear"></i> <span>{{"ChooseTheme" | translate}}</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu">
+              <li ng-repeat="theme in themes" ng-click="changeTheme(theme)"> <a href="javascript:void(0);" ng-class="{'bg-primary': myTheme==theme}">{{theme}} <i class="fa fa-lg fa-check pull-right" ng-if="myTheme==theme"></i></a></li>
+            </ul> </li>
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item"> <a href="javascript:void(0);" class="dropdown-toggle" style="color: #fff;min-width: 123px;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img class="user-avatar" alt="{{session.user.name}}" ng-src="{{session.user.picture || 'plugins/cronapp-framework-js/dist/img/img-user.svg'}}" style="max-height:22px;max-width:22px" data-component="crn-image"> <span>{{session.user.name}}</span> <span class="caret"></span> </a>
+            <ul class="dropdown-menu">
+              <li><a class="component-holder" data-toggle="modal" data-target="#modalPassword" data-component="crn-anchor">{{"Home.view.ChangePassword" | translate}}</a></li>
+              <li><a ng-click="logout()" href="" data-component="crn-anchor"><span>{{"Home.view.Logout" | translate}}</span></a></li>
+            </ul> </li>
+            <cron-dynamic-menu class="component-holder" data-component="crn-dynamic-menu" options="{&quot;subMenuOptions&quot;:[{&quot;id&quot;:&quot;1h85bvnhg7511&quot;,&quot;name&quot;:&quot;Home&quot;,&quot;title&quot;:&quot;{{'Home.view.Home' | translate}}&quot;,&quot;iconClass&quot;:&quot;fa fa-home&quot;,&quot;action&quot;:&quot;cronapi.screen.changeView('#/home', [])&quot;,&quot;level&quot;:1,&quot;menuItems&quot;:[]},{&quot;id&quot;:&quot;1iynbo1wq8twj&quot;,&quot;name&quot;:&quot;Admin&quot;,&quot;title&quot;:&quot;{{'Home.view.Admin' | translate}}&quot;,&quot;iconClass&quot;:&quot;fa fa-user&quot;,&quot;security&quot;:&quot;visible : Administrators, enabled : Administrators&quot;,&quot;action&quot;:&quot;&quot;,&quot;level&quot;:1,&quot;menuItems&quot;:[{&quot;id&quot;:&quot;t4fkwdjzlcmu&quot;,&quot;name&quot;:&quot;Users&quot;,&quot;title&quot;:&quot;{{'Home.view.Users' | translate}}&quot;,&quot;iconClass&quot;:&quot;fa fa-user&quot;,&quot;security&quot;:&quot;visible : Administrators, enabled : Administrators&quot;,&quot;action&quot;:&quot;cronapi.screen.changeView('#/home/admin/user', [])&quot;,&quot;level&quot;:2,&quot;menuItems&quot;:[]}]}]}">Dynamic Menu</cron-dynamic-menu>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div ui-view="" class="container-fluid main-view main-view-horizontal">
+<div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-textinput" id="crn-textinput-233224"><div class="form-group"><label for="input8836">Url</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.url" class="form-control k-textbox" id="input8836" placeholder="Placeholder text"></div></div><div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-textinput" id="crn-textinput-54091"><div class="form-group"><label for="input883657891">Nome Posto</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.nomePosto" class="form-control k-textbox" id="input883657891" placeholder="Placeholder text"></div></div><div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-91111"><div class="form-group"><label for="input88365789112121">Cidade Posto</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.cidadePosto" class="form-control k-textbox" id="input88365789112121" placeholder="Placeholder text"></div></div><div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-26411"><div class="form-group"><label for="input8836578911212125791">UF Posto</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.ufPosto" class="form-control k-textbox" id="input8836578911212125791" placeholder="Placeholder text"></div></div><div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-89591"><div class="form-group"><label for="input883657891121212579145921">ID Posto</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.idPosto" class="form-control k-textbox" id="input883657891121212579145921" placeholder="Placeholder text"></div></div><div class="component-holder ng-binding ng-scope col-md-2" data-component="crn-button" id="crn-button-573025"><button class="btn btn-default k-button btn-block" ng-click="cronapi.server('blockly.Rest.getToken').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home"></i> <span>Get token</span></button></div><div class="component-holder ng-binding ng-scope col-md-2" data-component="crn-button" id="crn-button-15061"><button class="btn btn-default k-button btn-block" ng-click="cronapi.server('blockly.Rest.getPostos').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home"></i> <span>Get Postos</span></button></div><div class="component-holder ng-binding ng-scope col-md-2" data-component="crn-button" id="crn-button-40671"><button class="btn btn-default k-button btn-block" ng-click="cronapi.server('blockly.Rest.inserePosto').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home"></i> <span>Insere Posto</span></button></div><div class="component-holder ng-binding ng-scope col-md-2" data-component="crn-button" id="crn-button-87851"><button class="btn btn-default k-button btn-block" ng-click="cronapi.server('blockly.Rest.alteraPosto').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home"></i> <span>Altera Posto</span></button></div><div class="component-holder ng-binding ng-scope col-md-2" data-component="crn-button" id="crn-button-32181"><button class="btn btn-default k-button btn-block" ng-click="cronapi.server('blockly.Rest.removePosto').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home"></i> <span>Remove Posto</span></button></div><div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-textarea" id="crn-textarea-390321"><div class="form-group"><label for="input6770">Resposta:</label><textarea id="textArea6770" ng-model="vars.resposta" maxlength="3000" style="resize:none" resize="resize:none;" class="form-control k-textbox" rows="10"></textarea></div></div></div> 
+<div class="modal fade" id="modalPassword">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-validation" autocomplete="off" name="form" role="form">
+          <div class="text-danger wrapper text-center" ng-show="authError">
+          </div>
+          <div class="list-group list-group-sm">
+            <div class="list-group-item">
+              <input type="password" class="form-control k-textbox" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control k-textbox" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" ng-required="true">
+            </div>
+            <div class="list-group-item">
+              <input type="password" class="form-control k-textbox" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}" ng-required="true">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-fab k-button" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading"><span class="k-icon k-i-check"></span></button>
+        <button class="btn btn-default btn-fab k-button" type="button" data-dismiss="modal"><span class="k-icon k-i-close"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
